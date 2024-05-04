@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+
+    background-image: url("./bg.avif");
+
+
+    background-position: center;
+}
+
+.footer {
+    font-family: 'Work Sans', sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    /* White background with 50% opacity */
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
