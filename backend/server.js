@@ -23,6 +23,9 @@ const server = app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
 
 
 const io = require('socket.io')(server, {
