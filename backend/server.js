@@ -27,6 +27,30 @@ const server = app.listen(PORT, () => {
 });
 
 
+// --------------------------deployment------------------------------
+
+const NODE_ENV = process.env.NODE_ENV || "production";
+
+// Resolve the directory for static assets
+const buildPath = path.resolve(__dirname, "../frontend/build");
+
+if (NODE_ENV === "production") {
+    // Serve static files from the React application
+    app.use(express.static(buildPath));
+
+    // Serve the React application index.html on all other routes
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(buildPath, "index.html"));
+    });
+} else {
+    // A simple endpoint to check if the API is running
+    app.get("/", (req, res) => {
+        res.send("API is running..");
+    });
+    console.log(`Server running in ${NODE_ENV} mode`);
+}
+// --------------------------deployment------------------------------
+
 
 const io = require('socket.io')(server, {
     pingTimeout: 60000,
