@@ -4,7 +4,7 @@ const connectDB = require("./config/db");
 const UserRoutes = require("./routes/userRoutes")
 const ChatRoutes = require("./routes/chatRoutes")
 const MessageRoutes = require("./routes/messageRoutes")
-
+const path = require("path");
 dotenv.config();
 
 const app = express();
