@@ -206,7 +206,7 @@ function SideDrawer() {
                   />
                 ))
               ) : (
-                <p>No user fnd</p> // Handling the case where no results are returned
+                <p>Search username to chat!</p> // Handling the case where no results are returned
               ))
             }
             {loadingChat && <Spinner ml="4" d="flex" />}
